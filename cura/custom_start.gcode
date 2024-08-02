@@ -5,6 +5,7 @@ G29 ; Auto bed-level (BL-Touch)
 M420 S1 ; Enable bed leveling correction
 G92 E0 ; Reset Extruder
 G1 X0.1 Y20 Z10 F5000.0 ; Move to start position
+M109 S{material_print_temperature_layer_0} ; Wait for Extruder temperature
 G1 Z0.3 F3000 ; Move Z Axis down to start point of first line
 G1 X0.1 Y200.0 Z0.3 F1500.0 E15 ; Draw the first line
 G1 X0.4 Y200.0 Z0.3 F5000.0 ; Move to side a little
